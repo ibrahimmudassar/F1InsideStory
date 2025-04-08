@@ -19,7 +19,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: for playwright with head
-        run: xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 1920x1080x24' python test.py
+        run: xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 1920x1080x24' python main.py
 
       - name: setup python
         uses: actions/setup-python@v4
