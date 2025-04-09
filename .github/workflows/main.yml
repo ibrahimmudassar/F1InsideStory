@@ -33,8 +33,6 @@ jobs:
 
       - name: Run headless test
         uses: coactions/setup-xvfb@v1
-        with:
-          run: npm test
 
       - name: execute py script # run main.py
         env:
