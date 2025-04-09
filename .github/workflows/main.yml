@@ -29,13 +29,14 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run playwright executable
-        run: python -m playwright install        
+        run: python -m playwright install
 
       - name: execute py script # run main.py
-        uses: coactions/setup-xvfb@v1
         env:
           GS_CREDS: ${{ secrets.GS_CREDS }}
-        run: xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 1920x1080x24' python main.py
+        uses: coactions/setup-xvfb@v1
+        with:
+          run: xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 1920x1080x24' python main.py
 
       - name: Keepalive Workflow
         uses: gautamkrishnar/keepalive-workflow@1.1.0
