@@ -31,6 +31,11 @@ jobs:
       - name: Run playwright executable
         run: python -m playwright install
 
+      - name: Run headless test
+        uses: coactions/setup-xvfb@v1
+        with:
+          run: npm test
+
       - name: execute py script # run main.py
         env:
           GS_CREDS: ${{ secrets.GS_CREDS }}
