@@ -16,7 +16,7 @@ url = "https://f1tv.formula1.com/page/1724/inside-story"  # Replace with your ta
 
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch(
-        headless=False
+        headless=True
     )  # Launch browser in headless mode
     page = browser.new_page()  # Create a new page
     page.goto(url)  # Navigate to the target URL
