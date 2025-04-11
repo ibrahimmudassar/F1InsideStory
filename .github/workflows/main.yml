@@ -42,7 +42,7 @@ jobs:
         env:
           GS_CREDS: ${{ secrets.GS_CREDS }}
           DISPLAY: :99
-        run: xvfb-run python main.py
+        run: python main.py
 
       - name: Keepalive Workflow
         uses: gautamkrishnar/keepalive-workflow@1.1.0
