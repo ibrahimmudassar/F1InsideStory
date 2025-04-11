@@ -41,6 +41,7 @@ jobs:
       - name: execute py script # run main.py
         env:
           GS_CREDS: ${{ secrets.GS_CREDS }}
+          DISPLAY: :99
         run: xvfb-run python main.py
 
       - name: Keepalive Workflow
