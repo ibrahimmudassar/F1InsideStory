@@ -43,7 +43,7 @@ jobs:
           DISPLAY: :99
         run: python main.py
 
-workflow-keepalive:
+  workflow-keepalive:
     if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     permissions:
